@@ -38,6 +38,9 @@
   .flan small{display:block;font-size:8.5px;letter-spacing:.22em;color:var(--muted);font-weight:600;margin-top:1px}
   .oklogo{height:44px;width:auto;display:block}
   .vs{color:var(--line);font-weight:300;font-size:18px;margin:0 2px}
+  /* Flanagan official logo */
+  .flanlogo{height:38px;width:auto;display:block}
+  .cobrand .flanlogo{height:62px}
 
   /* COVER */
   .cover{background:radial-gradient(1100px 620px at 80% -12%, rgba(26,158,68,.35), transparent 60%),linear-gradient(135deg,#3a2316 0%, #4a2e1e 48%, #0a5224 130%);color:#fff;justify-content:center}
@@ -85,7 +88,7 @@
   /* product gallery */
   .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:6px}
   .prod{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 4px 14px rgba(74,46,30,.05);display:flex;flex-direction:column}
-  .prod .ph{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:#f3ebe2}
+  .prod .ph{width:100%;aspect-ratio:3/2;object-fit:cover;display:block;background:#f3ebe2}
   .prod .info{padding:12px 15px 13px}
   .prod .nm{font-family:'Poppins';font-weight:700;font-size:15px;color:var(--ink);line-height:1.15}
   .prod .meta{font-size:12.5px;color:var(--muted);margin-top:3px;display:inline}
@@ -149,8 +152,10 @@ const TOTAL = 11;
 const leaf = c => `<svg width="28" height="28" viewBox="0 0 64 64" fill="none"><path d="M32 6c5 8 2 14-3 18 7-2 13 1 16 7-6 1-10 5-11 11 5-4 11-4 15 0-3 6-9 8-15 7 4 5 4 11 0 15-4-5-5-11-2-16-6 4-12 3-16-2 6-2 9-7 9-13-6 2-12-1-15-7 7-2 13 0 17 5-4-6-3-13 2-18 0 0 3-3 3-7z" fill="${c}"/></svg>`;
 const OKLOGO = `<img class="oklogo" src="img/logo.png" alt="Okanagan Frozen Dough">`;
 
+const FLANLOGO = `<img class="flanlogo" src="img/flanagan_green.png" alt="Flanagan Foodservice — The Difference You Deserve">`;
+const FLANLOGO_W = `<img class="flanlogo onbrand" src="img/flanagan_white.png" alt="Flanagan Foodservice — The Difference You Deserve">`;
 function bar(){return `<div class="brandbar">
-  <div class="flan">${leaf('#0f7a35')}<div>Flanagan<small>FOODSERVICE</small></div></div>
+  ${FLANLOGO}
   ${OKLOGO}
 </div>`;}
 function foot(n){return `<div class="foot"><span>Okanagan Frozen Dough · Sales Briefing · Prepared for the Flanagan Sales Team</span><span class="pg">${n} / ${TOTAL}</span></div>`;}
@@ -165,9 +170,9 @@ slides.push(`<section class="slide cover">
   <img class="heroimg" src="img/bun_hamburger.jpg" alt="">
   <div class="pad">
     <div class="cobrand">
-      <div class="flan">${leaf('#ffffff')}<div>Flanagan<small>FOODSERVICE</small></div></div>
+      ${FLANLOGO_W}
       <span class="vs">×</span>
-      <img class="oklogo onbrown" style="height:54px" src="img/logo.png" alt="Okanagan Frozen Dough">
+      <img class="oklogo onbrown" style="height:64px" src="img/logo.png" alt="Okanagan Frozen Dough">
     </div>
     <div class="eyebrow">Supplier Spotlight · Sales Team Briefing</div>
     <h1>Selling Okanagan<br>Frozen Dough</h1>
@@ -356,9 +361,9 @@ slides.push(`<section class="slide">
 slides.push(`<section class="slide closing">
   <div class="pad">
     <div class="cobrand">
-      <div class="flan">${leaf('#ffffff')}<div>Flanagan<small>FOODSERVICE</small></div></div>
+      ${FLANLOGO_W}
       <span class="vs">×</span>
-      <img class="oklogo onbrown" style="height:54px" src="img/logo.png" alt="Okanagan Frozen Dough">
+      <img class="oklogo onbrown" style="height:64px" src="img/logo.png" alt="Okanagan Frozen Dough">
     </div>
     <div class="eyebrow">Your Next Steps</div>
     <h2>Go sell some dough.</h2>
