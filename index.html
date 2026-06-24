@@ -49,7 +49,7 @@
   .cover h1{color:#fff;font-size:56px;font-weight:800;letter-spacing:-.5px}
   .cover .sub{color:#f1e6da;font-size:20px;margin-top:16px;max-width:640px;line-height:1.5}
   .cover .meta{margin-top:32px;display:flex;gap:28px;color:#e9d8c5;font-size:13.5px;font-weight:600;flex-wrap:wrap}
-  .cover .heroimg{position:absolute;right:-30px;bottom:-40px;width:430px;height:430px;border-radius:50%;object-fit:cover;opacity:.92;border:10px solid rgba(255,255,255,.10);z-index:1;box-shadow:0 20px 60px rgba(0,0,0,.4)}
+  .cover .bakeryhero{position:absolute;right:0;top:50%;transform:translateY(-50%);height:104%;width:auto;max-width:58%;object-fit:contain;z-index:1;pointer-events:none}
   /* chef mascot + speech bubble (bottom-right corner) */
   .mascot{position:absolute;right:38px;bottom:0;z-index:3;display:flex;flex-direction:column;align-items:center;width:300px;pointer-events:none}
   .mascot .chef{width:300px;height:auto;display:block;filter:drop-shadow(0 14px 26px rgba(0,0,0,.45));animation:bob 3.4s ease-in-out infinite}
@@ -144,7 +144,7 @@
   .hint{position:fixed;bottom:22px;right:24px;color:rgba(255,255,255,.55);font-size:12px;z-index:50}
   @media (max-width:760px){
     .pad{padding:24px 20px}.brandbar,.foot{padding-left:20px;padding-right:20px}
-    .cover h1{font-size:34px}.cover .heroimg{display:none}
+    .cover h1{font-size:34px}.cover .bakeryhero{opacity:.28;max-width:80%}
     .mascot{width:200px;right:16px}.mascot .chef{width:200px}.mascot .bubble{font-size:14px;margin-right:60px;padding:10px 14px}
     .grid2,.grid3,.statrow,.steps{grid-template-columns:1fr}.gallery{grid-template-columns:repeat(2,1fr)}
     h2.title{font-size:25px}.cols2{column-count:1}
@@ -177,7 +177,7 @@ const slides = [];
 
 /* 1 — COVER */
 slides.push(`<section class="slide cover">
-  <img class="heroimg" src="img/bun_hamburger.jpg" alt="">
+  <img class="bakeryhero" src="img/bakery_hero.png" alt="Chef Ladz baking in the bakery">
   <div class="pad">
     <div class="cobrand">
       ${FLANLOGO_W}
@@ -188,10 +188,6 @@ slides.push(`<section class="slide cover">
     <h1>Selling Okanagan<br>Frozen Dough</h1>
     <p class="sub">A proudly-Canadian, SQF-certified frozen dough partner — 30+ bread, bun, pizza &amp; freezer-to-oven items ready to stock your customer's shelves.</p>
     <div class="meta"><span>● Family-owned since 1994</span><span>● 30+ items in the Flanagan warehouse</span><span>● Thaw · proof · bake</span></div>
-  </div>
-  <div class="mascot" style="right:24%">
-    <div class="bubble">Let's make some dough <span class="cash">$$$</span></div>
-    <img class="chef" src="img/boss_chef.png" alt="Flanagan chef mascot">
   </div>
 </section>`);
 
